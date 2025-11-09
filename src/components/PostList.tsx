@@ -1,4 +1,5 @@
 // Main post list component with pagination
+import { useEffect } from 'react';
 import {
   Container,
   Box,
@@ -16,10 +17,13 @@ import { usePosts } from '../hooks/usePosts';
 export function PostList() {
   const { posts, loading, error, page, totalPages, setPage } = usePosts(1, 20);
 
+  // Scroll to top when page changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [page]);
+
   const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
-    // Scroll to top when page changes
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Loading skeleton
