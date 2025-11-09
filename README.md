@@ -1,54 +1,67 @@
-# Interview Demo - Rauschmayer
+# Interview Demo - Question 2
 
-This repository contains solutions for the interview questions.
+Real-time word display using Server-Sent Events (SSE).
 
-## 📋 Questions
+## 🚀 Quick Start
 
-### Question 1: Posts & Comments Display
-Create a web project that connects to the JSONPlaceholder REST API and displays:
-- Posts with pagination (20 per page)
-- Comments for each post
-- Clean UI/UX with responsive design
-
-**Branch:** `q1`
-
-### Question 2: Real-time Word Display
-Create a web server and frontend with:
-- A button that triggers a server endpoint
-- Server randomly loops through words: cat, dog, mouse, horse, fox
-- Every 5 seconds, server picks a new word
-- Word is displayed live in the frontend
-- Choose between polling, RTC, or WebSockets (with justification)
-
-**Branch:** `q2`
-
-## 🚀 How to Review
-
-### Question 1 Solution
+### Docker (Recommended)
 ```bash
-git checkout q1
-npm install
-npm run dev
-# or
 npm run start-docker
 ```
+- Backend: http://localhost:3000
+- Frontend: http://localhost:5173
+- Click "Start Stream" button to begin
 
-### Question 2 Solution
+### Local Development
+
+#### Backend
 ```bash
-git checkout q2
+cd backend
 npm install
 npm run dev
-# or
-npm run start-docker
 ```
 
-## 📝 Requirements
+#### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-Both solutions demonstrate:
-- Clean, well-structured code
-- DRY principle
-- Smart naming conventions
-- Modular architecture
-- Industry best practices
-- No unnecessary or unused code
+## 🏗️ Project Structure
 
+```
+q2/
+├── backend/              # Node.js + Express + TypeScript
+│   ├── src/
+│   │   ├── server.ts    # Express server with SSE
+│   │   ├── wordLoop.ts  # Word loop manager
+│   │   ├── constants.ts # Configuration
+│   │   └── types.ts     # TypeScript types
+│   └── package.json
+│
+├── frontend/            # React + TypeScript + Vite
+│   ├── src/
+│   │   ├── App.tsx      # Main component
+│   │   ├── App.css      # Component styles
+│   │   ├── index.css    # Global styles
+│   │   └── hooks/
+│   │       └── useSSE.ts # Custom SSE hook
+│   └── package.json
+│
+└── docker-compose.yml   # Docker setup
+```
+
+## 🛠️ Tech Stack
+
+### Backend
+- Node.js 20
+- Express
+- TypeScript
+- Server-Sent Events (SSE)
+
+### Frontend
+- React 19
+- TypeScript
+- Vite 7
+- Vanilla CSS

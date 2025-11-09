@@ -1,0 +1,12 @@
+{
+  "name": "rauschmayer-interview-demo",
+  "version": "1.0.0",
+  "description": "Interview demo for Rauschmayer - Q1 and Q2",
+  "scripts": {
+    "start-docker": "docker-compose up --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
