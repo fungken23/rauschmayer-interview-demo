@@ -27,20 +27,25 @@ Create a web server and frontend with:
 ### Question 1 Solution
 ```bash
 git checkout q1
-npm install
-npm run dev
-# or
 npm run start-docker
 ```
+- Open http://localhost:5173 in your browser
+- View posts with pagination and expandable comments
+
+**Tech Stack:** React 19 + TypeScript + Vite + Material UI + Dark Theme
+
+---
 
 ### Question 2 Solution
 ```bash
 git checkout q2
-npm install
-npm run dev
-# or
 npm run start-docker
 ```
+- Backend: http://localhost:3000
+- Frontend: http://localhost:5173
+- Click "Start Stream" button to begin
+
+**Tech Stack:** Node.js 20 + Express + React 19 + TypeScript + SSE + Docker
 
 ## 📝 Requirements
 
